@@ -25,5 +25,7 @@ Contoh tampilan daftar belanja dan total yang harus dibayar:
 | Chitato     |            10 |         6000 |         60000 |
 | Roti Tawar  |            10 |        11000 |        110000 |
 | Teh Botol   |            10 |         3500 |         35000 |
+
 Pemesanan sudah benar.
+
 Anda mendapatkan diskon 5% sebesar Rp 10250. Total belanja Anda adalah Rp 194750 (sudah termasuk diskon).
