@@ -1,9 +1,10 @@
 # Super Cashier
 
 Super Cashier adalah sistem kasir self-service untuk sebuah supermarket. Pelanggan bisa langsung memasukkan item, jumlah item, dan harga item yang dibeli.
+Modul dibuat dengan menerapkan Object Oriented Programming, function, try-except, documentation, dan clean code.
 
 Alur belanja:
-1. Customer membuat ID transaksi customer (membuat objek dari class Transaction)
+1. Customer membuat ID transaksi customer
 2. Customer memasukkan nama item, jumlah item, dan harga item yang dibeli
 3. Jika ternyata ada kesalahan dalam memasukkan nama item, jumlah item, atau harga item, customer bisa melakukan update item:
    a. update nama item
