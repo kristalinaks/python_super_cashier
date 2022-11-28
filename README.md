@@ -22,13 +22,34 @@ Alur belanja:
 6. Terakhir, customer bisa menampilkan total belanja yang harus dibayar dan diskon yang didapatkan (jika ada).
 
 ## Alur Code / Flowchart
-'''mermaid
+```mermaid
 flowchart TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-'''
+    A([start])-->B[membuat ID transaksi dengan class Transaction];
+    B-->C[memasukkan item dengan fungsi add_item];
+    C-->D{ada data yang ingin diubah?};
+    D--Ya-->E[update nama/jumlah/harga dengan fungsi update_item];
+    D--Tidak-->F{ada item yang ingin dibatalkan?};
+    E-->F;
+    F--Ya-->G[hapus item dengan fungsi delete_item atau reset_transaction];
+    G-->H{masih ada item yang ingin ditambahkan?};
+    F--Tidak-->H;
+    H--Ya-->C;
+    H--Tidak-->I[mengecek dan menampilkan pesanan dengan fungsi check_order];
+    I-->J{input sudah benar?};
+    J--Ya-->K[menghitung total belanja dengan fungsi total_price];
+    J--Tidak-->E;
+    K-->L{total belanja>500.000?};
+    L--Ya-->M[diskon 10%];
+    M-->N{total belanja>300.000?};
+    L--Tidak-->N;
+    N--Ya-->O[diskon 8%];
+    O-->P{total belanja>200.000?};
+    N--Tidak-->P;
+    P--Ya-->Q[diskon 5%];
+    Q-->R[menampilkan total belanja setelah diskon];
+    P--Tidak-->R;
+    R-->S([selesai]);
+```
 
 ## Penjelasan dari Function
 
