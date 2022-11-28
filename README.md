@@ -1,1 +1,1 @@
-# python_self_cashier
+# Self Cashier
