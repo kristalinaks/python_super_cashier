@@ -28,11 +28,13 @@ flowchart TD;
     B-->C[memasukkan item dengan fungsi add_item];
     C-->D{ada data yang ingin diubah?};
     D--Ya-->E[update nama/jumlah/harga dengan fungsi update_item];
-    D--Tidak-->F{ada item yang ingin dibatalkan?};
-    E-->F;
+    E-->T(( ));
+    D--Tidak-->T;
+    T-->F{ada item yang ingin dibatalkan?};
     F--Ya-->G[hapus item dengan fungsi delete_item atau reset_transaction];
-    G-->H{masih ada item yang ingin ditambahkan?};
-    F--Tidak-->H;
+    G-->U(( ));
+    U-->H{masih ada item yang ingin ditambahkan?};
+    F--Tidak-->U;
     H--Ya-->C;
     H--Tidak-->I[mengecek dan menampilkan pesanan dengan fungsi check_order];
     I-->J{input sudah benar?};
@@ -40,19 +42,22 @@ flowchart TD;
     J--Tidak-->E;
     K-->L{total belanja>500.000?};
     L--Ya-->M[diskon 10%];
-    M-->N{total belanja>300.000?};
-    L--Tidak-->N;
+    M-->V(( ));
+    L--Tidak-->V;
+    V-->N{total belanja>300.000?};
     N--Ya-->O[diskon 8%];
-    O-->P{total belanja>200.000?};
-    N--Tidak-->P;
+    O-->W(( ));
+    N--Tidak-->W;
+    W-->P{total belanja>200.000?};
+    P--Tidak-->X;
     P--Ya-->Q[diskon 5%];
-    Q-->R[menampilkan total belanja setelah diskon];
-    P--Tidak-->R;
+    Q-->X(( ))
+    X-->R[menampilkan total belanja setelah diskon];
     R-->S([selesai]);
 ```
 
 ## Penjelasan dari Function
-
+1. 
 ## Demonstrasi
 
 ## Kesimpulan
