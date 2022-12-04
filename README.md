@@ -8,16 +8,16 @@ Modul dibuat dengan menerapkan Object Oriented Programming, function, try-except
 Membuat sistem kasir self-service dengan alur belanja berikut:
 1. Customer membuat ID transaksi customer
 2. Customer memasukkan nama item, jumlah item, dan harga item yang dibeli
-3. Jika ternyata ada kesalahan dalam memasukkan nama item, jumlah item, atau harga item, customer bisa melakukan update item:
-   a. update nama item
-   b. update jumlah item
+3. Jika ternyata ada kesalahan dalam memasukkan nama item, jumlah item, atau harga item, customer bisa melakukan update item:\
+   a. update nama item\
+   b. update jumlah item\
    c. update harga item
-4. Jika batal membeli suatu item, customer bisa melakukan hapus item:
-   a. hapus 1 item
+4. Jika batal membeli suatu item, customer bisa melakukan hapus item:\
+   a. hapus 1 item\
    b. reset seluruh transaksi
-5. Jika sudah selesai berbelanja, tetapi masih ragu apakah harga barang dan nama yang diinput sudah benar, customer bisa melakukan check order dengan output sebagai berikut:
-   a. Mengeluarkan pesan "Pemesanan sudah benar" jika tidak ada kesalahan input.
-   b. Mengeluarkan pesan "Terdapat kesalahan input data" jika terjadi kesalahan input.
+5. Jika sudah selesai berbelanja, tetapi masih ragu apakah harga barang dan nama yang diinput sudah benar, customer bisa melakukan check order dengan output sebagai berikut:\
+   a. Mengeluarkan pesan "Pemesanan sudah benar" jika tidak ada kesalahan input.\
+   b. Mengeluarkan pesan "Terdapat kesalahan input data" jika terjadi kesalahan input.\
    c. Menampilkan tabel berisi seluruh data pesanan.
 6. Terakhir, customer bisa menampilkan total belanja yang harus dibayar dan diskon yang didapatkan (jika ada).
 
@@ -57,7 +57,7 @@ flowchart TD;
 ```
 
 ## Penjelasan dari Function
-1. __init()\
+1. __init()__\
 Fungsi inisialisasi untuk class Transaction\
 dict_txn (dict) = dictionary untuk menyimpan data transaksi (dict)\
 txn_valid (boolean) = untuk menandai apakah data yang diinput ke dalam dictionary transaksi sudah valid. Nilai awal adalah True dan bisa berubah False setelah dicek validitasnya lewat fungsi.
