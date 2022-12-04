@@ -66,7 +66,7 @@ class Transaction:
     
     def update_item_price(self, nama, harga_baru):
         '''Fungsi untuk mengubah harga item dalam dictionary yang sudah diinput.
-        nama (String) = nama item yang ingin diubah jumlahnya, key dari dictionary
+        nama (String) = nama item yang ingin diubah harganya, key dari dictionary
         harga_baru (int) = harga baru dari nama item yang dibeli'''
 
         #mengecek tipe data integer        
@@ -90,7 +90,9 @@ class Transaction:
         try:
             self.dict_txn.pop(nama)
             print(f"Menghapus pesanan {nama}.")
+            print("")
             self.print_order()
+            
         
         except KeyError:
             print(f"{nama} tidak ada dalam daftar pesanan.")
@@ -108,7 +110,7 @@ class Transaction:
         
         try:
             table_txn = pd.DataFrame(self.dict_txn).T
-            headers = ["Nama Barang", "Jumlah", "Harga", "Total"]
+            headers = ["Nama Item", "Jumlah Item", "Harga/Item", "Total Harga"]
             print(tabulate(table_txn, headers, tablefmt="github"))
         
         except:
@@ -121,7 +123,7 @@ class Transaction:
         try:
             #menampilkan semua pesanan
             table_txn = pd.DataFrame(self.dict_txn).T
-            headers = ["Nama Barang", "Jumlah", "Harga", "Total"]
+            headers = ["Nama Item", "Jumlah Item", "Harga/Item", "Total Harga"]
             print(tabulate(table_txn, headers, tablefmt="github"))
 
             #mengecek jumlah/harga lebih dari 0
@@ -149,11 +151,13 @@ class Transaction:
         
         #menghitung diskon yang didapat
         if self.txn_valid:
-            total_belanja = 0
 
+            #menghitung total belanja
+            total_belanja = 0
             for item in self.dict_txn:
                 total_belanja += self.dict_txn[item][2] 
 
+            #menghitung diskon
             if total_belanja>500_000:
                 diskon = int(total_belanja*0.1)
                 total_belanja = int(total_belanja-diskon)
